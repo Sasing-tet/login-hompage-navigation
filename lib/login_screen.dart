@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_full_hex_values_for_flutter_colors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_login/main.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -107,7 +108,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   //sign up Button
                 SizedBox(height: 35),
 
-                ElevatedButton(onPressed: () {},
+                ElevatedButton(onPressed: () {
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(builder: (context) => const screen1Sasing()),
+                    );
+                },
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Color(0xfffffa000)),
                   padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 110, vertical: 10)),
